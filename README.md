@@ -194,6 +194,7 @@ Let's see what happens when we type `help(str)`.
 help(str)
 ```
 
+```python
     Help on class str in module builtins:
     
     class str(object)
@@ -589,7 +590,7 @@ help(str)
      |      in the resulting dictionary, each character in x will be mapped to the
      |      character at the same position in y. If there is a third argument, it
      |      must be a string, whose characters will be mapped to None in the result.
-    
+```
 
 
 So, we can see from the output it gives us a lot of information regarding the datatype including built-in methods we can use to operate on data of that particular type (i.e. Strings).
