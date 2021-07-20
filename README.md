@@ -1,4 +1,3 @@
-
 # Introduction to Variables: Strings
 
 ## Introduction
@@ -13,54 +12,63 @@ By the end of this lesson, you will be able to:
 
 ## What are Strings?
 
-A lot of information in the world is in the form of text. To capture this information and operate on it in Python we take this text and make it into the **String** (`str`) data type.
+A lot of information in the world is in the form of text. To capture this 
+information and operate on it in Python we take this text and make it into 
+the **String** (`str`) data type.
 
-Below, we have the name of a cartoon character, Homer Simpson. By putting quotes (`""`) or (`''`) around the name, we create a string.
+Below, we have the name of a cartoon character, Homer Simpson. By putting 
+quotes (`""`) or (`''`) around the name, we create a string.
 
 ```python
 "Homer Simpson"
 ```
-When programmers say *string*, what they mean is text.  When programmers say *data type*, they just mean type of data.  We can think of `'Homer Simpson'` as an *instance* of the string data type.
+
+When programmers say *string*, what they mean is text.  When programmers say *data type*, 
+they just mean type of data.  We can think of `'Homer Simpson'` as an *instance* of 
+the string data type.
 
 Here are a few other types of data in Python that we will talk more about in later lessons:
+
 ```python
 100 # Integer
 10.0 # Float
 True # Boolean
 ```
 
-Since there are several types of data in Python we can discover the type of any piece of data by calling, or executing, the `type()` function. By calling or executing a function, we mean running the function so that it executes the code within it.
+Since there are several types of data in Python we can discover the type of any piece 
+of data by calling, or executing, the `type()` function. By calling or executing a 
+function, we mean running the function so that it executes the code within it.
 
 Let's look at an example below:
 
-> **Note:** Press the shift + enter keys to run the code below. The cell that populates below is the return or output of the type function.
+> **Note:** Press the shift + enter keys to run the code below. The cell that populates
+>  below is the return or output of the type function.
 
 
 ```python
 type("Homer Simpson")
 ```
 
+```
+str
+```
 
+We need to pay attention to what type of data we are working with because they operate
+differently and have different values as well as functions that we are able to use on them. 
 
-
-    str
-
-
-
-We need to pay attention to what type of data we are working with because they operate differently and have different values as well as functions that we are able to use on them. 
-
-For example, to create a new string (or to *initialize* a string) we cannot simply type letters. Instead, we need to be very explicit and tell Python it is about to see some text. We do this by surrounding our text with quotes, `""`.  If we don't do that or end our quotation marks too early, Python will throw an error.
+For example, to create a new string (or to *initialize* a string) we cannot simply type 
+letters. Instead, we need to be very explicit and tell Python it is about to see some 
+text. We do this by surrounding our text with quotes, `""`.  If we don't do that or end 
+our quotation marks too early, Python will throw an error.
 
 
 ```python
 "This is a properly formatted string!"
 ```
 
-
-
-
+```
     'This is a properly formatted string!'
-
+```
 
 
 
@@ -68,70 +76,62 @@ For example, to create a new string (or to *initialize* a string) we cannot simp
 "Th"is will throw an error!
 ```
 
-
+```python
       File "<ipython-input-10-08f2a98e3ef7>", line 1
         "Th"is will throw an error!
                         ^
     SyntaxError: invalid syntax
+```
 
 
-
-> **Note:** double quotes and single quotes can be used interchangeably in Python; however, for readability it is important that we stay consistent. At first, it might seem strange how picky programmers are about details like this, but after a couple of years of coding, you too might end up in a fight like [this one](https://www.youtube.com/watch?v=SsoOG6ZeyUI)!
+> **Note:** double quotes and single quotes can be used interchangeably
+>  in Python; however, for readability it is important that we stay consistent. 
+>  At first, it might seem strange how picky programmers are about details like
+>   this, but after a couple of years of coding, you too might end up in a fight
+>    like [this one](https://www.youtube.com/watch?v=SsoOG6ZeyUI)!
 
 Strings can contain numbers as well. It may look like 42, but it if it wrapped with `'42'`, then it is a string. See the difference below.
-
 
 ```python
 type('42')
 ```
 
-
-
-
+```
     str
-
-
-
+```
 
 ```python
 type(42)
 ```
 
-
-
-
-    int
-
-
-
+```
+int
+```
 
 ```python
 type(42.0)
 ```
 
-
-
-
-    float
-
+```
+float
+```
 
 
 ### Changing Data With Built In Methods
 
-Python is picky like this for a reason. For example, once it knows we are working with a string, it gives us specific functionality for operating on strings. We call this functionality a **function** or a **method**.
+Python is picky like this for a reason. For example, once it knows we are working
+with a string, it gives us specific functionality for operating on strings. We 
+call this functionality a **function** or a **method**.
 
 Below we have a method that works with a String, but does not work with an integer.
-
 
 ```python
 'Homer Simpson'.upper()
 ```
 
-
-
-
+```
     'HOMER SIMPSON'
-
+```
 
 
 
@@ -139,12 +139,12 @@ Below we have a method that works with a String, but does not work with an integ
 42.upper()
 ```
 
-
+```
       File "<ipython-input-15-8ab5bf46fc2d>", line 1
         42.upper()
                ^
     SyntaxError: invalid syntax
-
+```
 
 
 Yep.  Bad news bears.
@@ -160,11 +160,9 @@ Here is an examples that follows this format and returns a `True` or `False` val
 "Homer Simpson".endswith('Simpson')
 ```
 
-
-
-
+```
     True
-
+```
 
 
 
@@ -172,20 +170,22 @@ Here is an examples that follows this format and returns a `True` or `False` val
 "Charles Montgomery Burns".endswith('Simpson')
 ```
 
-
-
-
+```
     False
+```
 
 
-
-As you can see in this notebook, most of our operations on data will follow the data-dot-method_name-parentheses format.
+As you can see in this notebook, most of our operations on data will follow the 
+data-dot-method_name-parentheses format.
 
 ##  Discovering New Methods
 
-You may be starting to worry about there being too many methods to keep track of. Let's ask Python for help with finding more information about what we can do with strings.
+You may be starting to worry about there being too many methods to keep track of. 
+Let's ask Python for help with finding more information about what we can do with strings.
 
-The `help()` function in Python comes built-in and is like an old school Alexa. We give our prompt or *data type* to the `help()` function and it tells us everything it knows about that data type.
+The `help()` function in Python comes built-in and is like an old school Alexa. 
+We give our prompt or *data type* to the `help()` function and it tells us everything 
+it knows about that data type.
 
 Let's see what happens when we type `help(str)`.
 
@@ -593,11 +593,14 @@ help(str)
 ```
 
 
-So, we can see from the output it gives us a lot of information regarding the datatype including built-in methods we can use to operate on data of that particular type (i.e. Strings).
+So, we can see from the output it gives us a lot of information regarding the datatype 
+including built-in methods we can use to operate on data of that particular type (i.e. Strings).
 
-**Note:** *If you type the `help()` function in your terminal and the output is longer than the window, you can press the letter `q` to exit back to normal operation.*
+**Note:** _If you type the `help()` function in your terminal and the output is longer 
+than the window, you can press the letter `q` to exit back to normal operation._
 
-Holy cow that's a lot of words. If we scroll down to the word capitalize, things begin to make more sense. For example, for capitalize, this is what it says:
+Holy cow that's a lot of words. If we scroll down to the word capitalize, things 
+begin to make more sense. For example, for capitalize, this is what it says:
 
 ```python
 capitalize(...)
@@ -609,16 +612,13 @@ capitalize(...)
 
 Our next step is to use our formula of datatype-dot-method name-parentheses, and see what happens next.
 
-
 ```python
 "smithers".capitalize()
 ```
 
-
-
-
+```
     'Smithers'
-
+```
 
 
 ## Tips going forward
@@ -640,16 +640,13 @@ Here is one more method of discovery:  **just ask Google**.  For example, look w
 
 Then we try this new method out ourselves, to see if this user on StackOverFlow is right (they normally are).
 
-
 ```python
 "hello world".title()
 ```
 
-
-
-
+```
     'Hello World'
-
+```
 
 
 And our work is done.
@@ -657,6 +654,15 @@ And our work is done.
 Feel free to look at [other common string operations here.](https://docs.python.org/2/library/string.html)
 
 ## Summary
-In this lesson, we learned about our first datatype in Python: the string.  A string is just text. We indicate to Python that we are writing a string by surrounding our content with quotation marks. Once we do this, we can operate on this string by calling methods like `upper()` or `endswith()`. We identified a general pattern for calling methods on datatypes: 'instance of a datatype-dot-method name-parentheses'.
+In this lesson, we learned about our first datatype in Python: the string.  A string is just text. 
+We indicate to Python that we are writing a string by surrounding our content with quotation marks. 
+Once we do this, we can operate on this string by calling methods like `upper()` or `endswith()`. 
+We identified a general pattern for calling methods on datatypes: 'instance of a 
+datatype-dot-method name-parentheses'.
 
-The second thing we learned was different mechanisms for learning about methods.  We saw the importance of guessing and experimentation, and how doing so can give us error messages, which provide clues. We also saw how to ask questions about a datatype by calling `help()` followed by the datatype name like `help(str)`.  Finally, we saw we can ask Google.  This mechanism of exploration is a skill we'll build up over time and this course will provide guidance and practice all along the way.
+The second thing we learned was different mechanisms for learning about methods.  We saw the 
+importance of guessing and experimentation, and how doing so can give us error messages, which 
+provide clues. We also saw how to ask questions about a datatype by calling `help()` followed by 
+the datatype name like `help(str)`.  Finally, we saw we can ask Google.  This mechanism of 
+exploration is a skill we'll build up over time and this course will provide guidance and
+practice all along the way.
